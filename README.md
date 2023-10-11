@@ -6,7 +6,7 @@
 - [x] - `removeNonAlphas()`
 - [x] - `removeDuplicate()`
 - [ ] - `charToInt()`
-- [x] - `shiftAlphaCharacter()`
+- [ ] - `shiftAlphaCharacter()`
 - [ ] - `caesarCipher()`
 - [ ] - `vigenereCipher()`
 - [ ] - `fillGrid()`
