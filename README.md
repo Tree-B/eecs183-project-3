@@ -15,11 +15,15 @@
 - [ ] - `polybiusSquare()`
 ### utility 
 - [ ] finish charToInt()
+- [ ] write description
 ### ceasar
 - [ ] finish shiftAlphaCharacter()
 - [ ] finish ceasar()
 - [ ] test
+- [ ] write description
 ### vigenere.cpp
 _start_
+- [ ] write description
 ### polybius.cpp
 _start_
+- [ ] write description
