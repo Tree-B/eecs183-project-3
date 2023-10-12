@@ -58,10 +58,9 @@ string removeDuplicate(string original) {
 }
 
 int charToInt(char original) {
-    // TODO: implement
-    
-    // returning 0 to avoid compile error
-    return 0;
+    int integer = original-'0';
+
+    return integer;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

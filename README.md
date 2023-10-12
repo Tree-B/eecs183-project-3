@@ -14,7 +14,10 @@
 - [ ] - `findInGrid()`
 - [ ] - `polybiusSquare()`
 ### utility 
-- [ ] finish charToInt()
+- [x] finish toUpperCase()
+- [x] finish removeNonAlphas()
+- [x] finish removeDuplicate()
+- [x] finish charToInt()
 - [ ] write description
 ### ceasar
 - [ ] finish shiftAlphaCharacter()
