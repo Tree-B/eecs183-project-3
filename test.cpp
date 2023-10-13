@@ -64,13 +64,15 @@ void testRemoveNonAlphas() {
 
 void testRemoveDuplicates() {
     cout << endl << "Now testing function removeDuplicates()" << endl;
-    cout << "Expected: \"ECS183\", Actual: \"" << toUpperCase("EECS183") 
-         << "\"" << endl;
-    cout << "Expected: \"1234\", Actual: \"" << toUpperCase("1223334444")
-         << "\"" << endl;
+    cout << "Expected: \"ABC\", Actual: \"" 
+         << removeDuplicate("AABBBCCCC") << "\"" << endl;
     cout << "Expected: \"AMISBET\", Actual: \"" 
-         << toUpperCase("AMISBESTTIME") << "\"" << endl;
-    cout << "Expected: \"1A2A\", Actual: \"" << toUpperCase("1A2A")
+         << removeDuplicate("AMISBESTTIME") << "\"" << endl;
+    cout << "Expected: \"ECS183\", Actual: \"" << removeDuplicate("EECS183") 
+         << "\"" << endl;
+    cout << "Expected: \"1234\", Actual: \"" << removeDuplicate("1223334444")
+         << "\"" << endl;
+    cout << "Expected: \"1A2\", Actual: \"" << removeDuplicate("1A2A")
          << "\"" << endl;
     return;
 }

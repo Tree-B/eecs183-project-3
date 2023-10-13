@@ -37,18 +37,21 @@ string removeNonAlphas(string original) {
 }
 
 string removeDuplicate(string original) {
-    int ALNUMarray[ALNUM.size()] = {};
+    int ALNUMcount[ALNUM.size()] = {};
     string newStr = "";
+    int letter;
 
     for (int i = 0; i < original.size(); i++) {
         for (int j = 0; j < ALNUM.size(); j++) {
             if (original.at(i) == ALNUM.at(j)) {
-                ALNUMarray[i]++;
-            }
-        }
+                ALNUMcount[j] += 1;
 
-        if (ALNUMarray[i] <= 1) {
-            newStr += original.at(i);
+                if (ALNUMcount[j] <= 1) {
+                   newStr += original.at(i);
+                }
+
+                break;
+            }
         }
     }
 
