@@ -39,7 +39,6 @@ string removeNonAlphas(string original) {
 string removeDuplicate(string original) {
     int ALNUMcount[ALNUM.size()] = {};
     string newStr = "";
-    int letter;
 
     for (int i = 0; i < original.size(); i++) {
         for (int j = 0; j < ALNUM.size(); j++) {
