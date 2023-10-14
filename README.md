@@ -2,13 +2,14 @@
 
 ## TODO:
 ### test.cpp
+- [ ] - write description
 - [x] - `toUpperCase()`
 - [x] - `removeNonAlphas()`
 - [x] - `removeDuplicate()`
-- [ ] - `charToInt()`
-- [ ] - `shiftAlphaCharacter()`
+- [x] - `charToInt()`
+- [x] - `shiftAlphaCharacter()`
 - [ ] - `caesarCipher()`
-- [ ] - `vigenereCipher()`
+- [x] - `vigenereCipher()`
 - [ ] - `fillGrid()`
 - [ ] - `mixKey()`
 - [ ] - `findInGrid()`
@@ -18,7 +19,7 @@
 - [x] finish `removeNonAlphas()`
 - [x] finish `removeDuplicate()`
 - [x] finish `charToInt()`
-- [ ] write description
+- [x] write description
 ### ceasar.cpp
 - [ ] finish `shiftAlphaCharacter()`
 - [ ] finish `ceasar()`
@@ -26,7 +27,7 @@
 - [ ] write description
 ### vigenere.cpp
 - [x] write description
-- [ ] test
+- [ ] finish
 ### polybius.cpp
 _start_
 - [ ] write description

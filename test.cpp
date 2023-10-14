@@ -24,6 +24,8 @@ void testShiftAlphaCharacter();
 void testToUpperCase();
 void testRemoveNonAlphas();
 void testRemoveDuplicates();
+void testCharToInt();
+void testVigenereCipher();
 
 void startTests() {
     testShiftAlphaCharacter();
@@ -32,6 +34,8 @@ void startTests() {
     testToUpperCase();
     testRemoveNonAlphas();
     testRemoveDuplicates();
+    testCharToInt();
+    testVigenereCipher();
 
 
     return;
@@ -60,6 +64,7 @@ void testRemoveNonAlphas() {
          << "\"" << endl;
     cout << "Expected: \"\", Actual: \"" << removeNonAlphas("1234@") 
          << "\"" << endl;
+     return;
 }
 
 void testRemoveDuplicates() {
@@ -85,5 +90,27 @@ void testShiftAlphaCharacter() {
          << "'" << endl;
     cout << "Expected: 'd', Actual: '" << shiftAlphaCharacter('b', 2) 
          << "'" << endl;
+    return;
+}
+
+void testCharToInt() {
+    cout << endl << "Now testing function charToInt()" << endl;
+    cout << "Expected: '0', Actual: '" << charToInt('0') << "'" << endl;
+    cout << "Expected: '2', Actual: '" << charToInt('2') << "'" << endl;
+    cout << "Expected: '5', Actual: '" << charToInt('5') << "'" << endl;
+    cout << "Expected: '9', Actual: '" << charToInt('9') << "'" << endl;
+    return;
+}
+
+void testVigenereCipher() {
+    cout << endl << "Now testing function vigenereCipher()" << endl;
+    cout << "Expected: \"QBY1 GPQ2 HBEXG3\", Actual: \"" 
+         << vigenereCipher("ONE1 TWO2 THREE3", "count", true) << "\"" << endl;
+    cout << "Expected: \"A.M. is best time\", Actual: \"" 
+         << vigenereCipher("M.A. cj omfz fwgv", "mourning", false) << "\"" << endl;
+    cout << "Expected: \"92 D/H = Crqtywi wcc vo jovrxi\", Actual: \"" 
+         << vigenereCipher("92 M/H = Another way to swerve", "4RaceCars", true) << "\"" << endl;
+    cout << "Expected: \"A little bit O'Soul\", Actual: \"" 
+         << vigenereCipher("L tvwtdp jvw O'Kzcy", "lindaS3", false) << "\"" << endl;
     return;
 }

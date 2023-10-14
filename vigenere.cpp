@@ -15,39 +15,39 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include <iostream>
+#include <cctype>
 
 string vigenereCipher(string original, string keyword, bool encrypt) {
     string alphaOnlyKeyword;
     string newStr;
+    int shift;
     int increment = 0;
     
-    // Manipulating keyword
+    // Creating keyword with only uppercase alphabet characters
     alphaOnlyKeyword = removeNonAlphas(keyword);
     for (int i = 0; i < alphaOnlyKeyword.size(); i++) {
         alphaOnlyKeyword[i] = toupper(alphaOnlyKeyword[i]);
     }
 
-    int key[alphaOnlyKeyword.size()] = {};
-
-    for (int i = 0; i < alphaOnlyKeyword.size(); i++) {
-        for (int j = 0; j < ALNUM.size() - 10; j++) {
-            if (alphaOnlyKeyword.at(i) == ALNUM.at(j)) {
-                key[i] = j;
-                break;
-            }
-        }
-    }
-
     for (int i = 0; i < original.size(); i++) {
         if (isdigit(original.at(i)) || isspace(original.at(i))) {
+            newStr.at(i) = original.at(i);
             break;
         }
 
         if (increment > alphaOnlyKeyword.size()) {
             increment -= alphaOnlyKeyword.size();
         }
+
+        // TODO fix shift when encrypt is false
+        if (encrypt) {
+            shift = alphaOnlyKeyword.at(increment) - 'A';
+        }
+        else {
+            shift = 'A' - alphaOnlyKeyword.at(increment);
+        }
         
-        newStr += shiftAlphaCharacter(original.at(i), key[increment]);
+        newStr += shiftAlphaCharacter(original.at(i), shift);
 
         if (!isupper(original.at(i))) {
             newStr.at(i) = tolower(newStr.at(i));
