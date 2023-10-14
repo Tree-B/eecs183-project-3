@@ -86,3 +86,4 @@ void printGrid(const char grid[SIZE][SIZE]) {
         cout << endl;
     }
 }
+//hi
